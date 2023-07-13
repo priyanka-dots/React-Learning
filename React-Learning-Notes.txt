@@ -1,0 +1,221 @@
+ReactJS
+- It is a JavaScript library created by Facebook
+
+Library vs FrameWork
+-----------------------
+A library is a collection of functions developers can call at will and still control the flow of the software application. The operations performed to be performed by libraries are precisely and specifically defined.
+
+A framework is a structure in which the application defines the content of the operation by asking the developer to fill in the spaces. The framework defines the concept with the functionality itself is defined by the developer with the end-user in mind.
+
+Frameworks and libraries are code written by third parties to solve regular/common problems or to optimise performance. A key difference between the two is the inversion of control. When using a library, the control remains with the developer who tells the application when to call library functions. When using a framework, the control is reversed, which means that the framework tells the developer where code needs to be provided and calls it as it requires.
+
+
+Prerequisition for ReactJS - JavaScript .
+Additional knowledge Required: (ES6) optional
+Editor : VsCode
+
+ReactJs Implementaion ways : 1. CDN     2. via Packages (npm | yarn)
+
+CDN
+-----
+The goal of a Content Delivery Network (CDN) is to serve content from a server that is located geographically closer to your users. It’s a shorter distance to travel, and this means quicker response times. A CDN essentially is a collection of server nodes located around the world that contain a clone of static files.
+
+The benefits of using a CDN extend far beyond just brilliant response times, using a CDN also reduces the amount of bandwidth and requests that are served from your website. You will still get all the benefits of caching, compression and a wider network for your website. Because your website will have static content served from such a wide network, it means that the load will be extremely well balanced across your users around the world. Say, for example, you were about to launch a new product online and expect high volumes of traffic, this large distributed network of nodes is much better equipped to handle instantaneous high load.
+
+CORS
+------
+Cross-Origin Resource Sharing (CORS)
+
+A cross-origin request is a request for website resources external to the origin. For example, a.example.com attempts to serve resources from b.secondexample.com. CORS instructs the browser to determine if a cross-origin request, such as an image or JavaScript from b.secondexample.com, is allowed by a.example.com. The browser does not load resources that are disallowed by CORS.
+
+What is NPM?
+It is a tool used for package management and the default package manager for Node projects. NPM is installed when NodeJS is installed on a machine. It comes with a command-line interface (CLI) used to interact with the online database of NPM. This database is called the NPM Registry, and it hosts public and private 'packages.' To add or update packages, we use the NPM CLI to interact with this database.
+
+npm alternative is yarn
+
+
+CreateElement
+--------------
+createElement lets you create a React element.
+const element = createElement(type, props, ...children)
+
+Parameters
+    type: The type argument must be a valid React component type. 
+    props:  [properties or attributes]
+    optional ...children: [children node or the text that has to be rendered]
+
+Module & package
+-----------------
+A module is a single JavaScript file that has some reasonable functionality. 
+A package is a directory with one or more modules inside of it and a package. json file which has metadata about the package. 
+
+----------- 07 July 2023 -----------
+
+How to initialize npm?
+
+npm init
+
+npm init -y can be used to skip the setup step, npm takes care of it and creates the package.json json file automatically , but without configurations.
+
+Q: What is Parcel/Webpack? Why do we need it?
+
+A: Parcel/Webpack is type of a web application bundler used for development and productions purposes or power our application with different type functionalities and features. It offers blazing fast performance utilizing multicore processing, and requires zero configuration. Parcel can take any type of file as an entry point, but an HTML or JavaScript file is a good place to start. Parcel/Webpack are type of bundlers that we use to power our application with different type functionalities and features.
+Parcel Features:
+
+    HMR (Hot Module Replacement) - parcel keeps track of file changes via file watcher algorithm and renders the changes in the files
+    File watcher algorithm - made with C++
+    Minification
+    Cleaning our code
+    DEV and production Build
+    Super fast building algorithm
+    Image optimization
+    Caching while development
+    Compresses
+    Compatible with older version of browser
+    HTTPS in dev
+    Port Number
+    Consistent hashing algorithm
+    Zero Configuration
+    Automatic code splitting
+
+Installation commands:
+- npm install -D parcel
+npm init -y can be used to skip the setup step, npm takes care of it and creates the package.json json file automatically , but without configurations.
+
+command :
+    node version : node -v
+	npm version : npm -v
+	initalize npm : npm init -y 
+	dev Dependency : npm i -D parcel
+	react : npm in react
+	react-dom : npm in react-dom
+	
+
+package.json 
+- List of modules used in this project
+package.lock.json
+- List of modules with the details used in this project for the furture developer.
+
+
+^ Caret - "^1.0.0.0" used to accept the mini changes in the version.
+~ tilde -"~1.0.0.0" used to accept the major changes in the version.
+
+devDependency 
+-- list of packages that are used in the development machine not in the production
+Dependency
+-- list of package used in the development of the project
+TransitiveDependency
+-- list of packages that are dependent on the packages used in the project (as they say please come with us- they required that packages)
+
+
+BUNDLER
+A bundler is a tool used to solve this latency issue by combining and merging your code into a single file. 
+This limits the amount of HTTP requests to a server for those resources. Using a bundler is useful for optimizing the experience for both the user and developer.
+
+Parcel.js is an open-source bundler. It supports many popular languages like Typescript and SASS, and can also handle file types like images and fonts. 
+Parcel comes with a few extra tools built-in: a development server, diagnostics, minification, and even image compression.
+If your project requires additional configurations, you have the option to use Parcel’s many plugins.
+
+Install the Parcel bundler locally using the --save-dev flag:  npm install --save-dev parcel or npm install -D parcel
+The --save-dev flag saves the installation package as a development dependency. This means that your project will rely on Parcel during the development process to manage and create your application.
+
+------->>>>>>>>>>>>>>>>>-------------
+10 July 2023
+
+Introduction of JSX
+
+Parcel has a development server built in, which will automatically rebuild your app as you make changes. To start it, run the parcel CLI pointing to your entry file:
+npx parcel <Filename>
+ex. npx parcel reacthello.html
+
+
+------->>>>>>>>>>>>>>>>>-------------
+July 11, 2023
+
+#Component Name must start with a Capital Letter
+
+React Fragments
+
+In React, whenever you want to render something on the screen, you need to use a render method inside the component.
+This render method can return single elements or multiple elements. The render method will only render a single root node inside it at a time. However, if you want to return multiple elements, the render method will require a 'div' tag and put the entire content or elements inside it. This extra node to the DOM sometimes results in the wrong formatting of your HTML output and also not loved by the many developers.
+Example
+ return (    
+			<div>   //Extraneous div element  
+               <h2> Hello World! </h2>   
+               <p>  </p>   
+            </div>   
+         )
+
+Fragments Short Syntax
+ return (   
+          <>    
+            <h2> Hello World! </h2>   
+            <p> </p>   
+          </>   
+        )
+		
+JSX
+ const mydiv = (
+          <>    
+            <h2> Hello World! </h2>   
+            <p> </p>   
+          </>   
+ )
+ 
+
+Functional Component		
+ const mydiv =()=>{ return  (
+          <>    
+            <h2> Hello World! </h2>   
+            <p> </p>   
+          </>   
+ )}
+ 
+
+
+------->>>>>>>>>>>>>>>>>-------------
+July 12, 2023
+
+	
+JSX
+JSX (JavaScript + XML) is an extension of JavaScript that permits you to write down HTML directly within JavaScript, which features a few benefits of creating your code more readable and exercising the complete power of JavaScript within HTML. JSX is in some ways almost like HTML not HTML. Since JSX isn’t a legitimate JS code, it must be compiled into JS with a tool like Babel or similar.
+
+Babel 
+-It is a JavaScript compiler
+Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments. Here are the main things Babel can do for you:
+
+    Transform syntax
+    Polyfill features that are missing in your target environment (through a third-party polyfill such as core-js)
+    Source code transformations (codemods)
+
+Virtual DOM
+--------------
+DOM stands for ‘Document Object Model’. 
+It is a structured representation of the HTML elements that are present in a webpage or web app. 
+The DOM is represented as a tree data structure. It contains a node for each UI element present in the web document. 
+
+Updating DOM
+For each time there is a component update, the DOM needs to be updated and the UI components have to be re-rendered.
+So React has a different approach to dealing with this, as it makes use of something known as Virtual DOM.
+
+React uses Virtual DOM exists which is like a lightweight copy of the actual DOM(a virtual representation of the DOM). 
+
+When anything new is added to the application, a virtual DOM is created and it is represented as a tree. Each element in the application is a node in this tree. So, whenever there is a change in the state of any element, a new Virtual DOM tree is created. This new Virtual DOM tree is then compared with the previous Virtual DOM tree and make a note of the changes. After this, it finds the best possible ways to make these changes to the real DOM. Now only the updated elements will get rendered on the page again.
+ 
+Reconcillation
+The reconciliation process makes React work faster. Reconciliation is the process through which React updates the Browser DOM.
+
+React-Fiber- React 16
+Reconcillation + Diffing Algorithm
+
+Build Command:
+npx parcel build <filename>
+
+
+------->>>>>>>>>>>>>>>>>-------------
+July 13, 2023
+
+
+
+
+
